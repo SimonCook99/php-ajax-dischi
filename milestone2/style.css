@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 70px;
+    background-color: #2e3a46;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    max-height: 65%;
+    margin: 10px;
+
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+main{
+    text-align: center;
+    position: relative;
+    background-color: #1e2d3b;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main h1{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.card{
+    width: 16%;
+    background-color: #2e3a46;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+
+
+}
+
+main h2{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+main p{
+    color: grey;
+    
+}
+
+main img{
+    max-width: 100%;
+}
