@@ -20,9 +20,14 @@ header img{
 }
 
 main{
-    height: calc(100vh + 120px);
     text-align: center;
     position: relative;
+    background-color: #1e2d3b;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 main h1{
@@ -32,11 +37,28 @@ main h1{
     left: 50%;
     transform: translate(-50%);
 }
-main .card-container{
-    width: 80%;
-    margin: 50px auto;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.card{
+    width: 16%;
+    background-color: #2e3a46;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+
+
+}
+
+main h2{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+main p{
+    color: grey;
+    
+}
+
+main img{
+    max-width: 100%;
 }

@@ -1,8 +1,6 @@
 <?php
 
     include "./database.php";
-
-
 ?>
 
 
@@ -17,20 +15,27 @@
 </head>
 <body>
     <header>
-        <img src="../assets/logo-small.svg" alt="logo Spotify">
+        <img src="./img/logo-small.svg" alt="logo Spotify">
     </header>
 
     <main>
 
         <?php
 
+            //scorro dinamicamente il database e stampo le informazioni necessarie
             foreach($database as $film){
-                echo "<div>
-                        <img src='$film["poster"]'>
-                        <h2>$film["title"]</h2>
-                        <p>$film["author"]</p>
-                        <p>$film["year"]</p>
-                    </div>"
+                
+                $poster = $film['poster'];
+                $title = $film['title'];
+                $author = $film['author'];
+                $year = $film['year'];
+                
+                echo "<div class='card'>
+                        <img src=$poster>
+                        <h2>$title</h2>
+                        <p>$author</p>
+                        <p>$year</p>
+                    </div>" ;
             }
 
         ?>
