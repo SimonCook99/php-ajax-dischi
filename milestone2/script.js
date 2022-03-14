@@ -1,20 +1,31 @@
 var app = new Vue({
     el: "#root",
     data:{
-        listaFilm: [],
-        messaggio: "ciao"
+        listaDischi: [],
+        messaggio: "ciao",
+        
     },
     methods:{
 
         chiamaServer(){
             axios.get("http://localhost/php-ajax-dischi/milestone2/serverAPI.php")
                     .then(function(response){
-                        this.listaFilm = response.data;
-                        console.log(this.listaFilm);
+                        this.listaDischi = response.data;
+                        console.log(this.listaDischi);
+                        
                     }) 
         }
     },
     mounted(){
         this.chiamaServer();
+    },
+    computed:{
+
+        showDischi(){
+            
+            return this.listaDischi;
+            
+        }
+
     }
 })
